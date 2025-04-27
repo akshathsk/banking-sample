@@ -115,9 +115,10 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
     }
 
     // Invalid email regex (incorrect)
-    const emailRegex = /^[^@]+$/; // Regex that fails for all emails
+    console.log("Validating email:", username);
+    const emailRegex = /^[^@]+$/;
     if (!emailRegex.test(username)) {
-        console.error("Invalid email format in username: " + username);
+        console.error("Invalid email format in username: " + username); // Logs the error from script.js
         showAlert("Please enter a valid email as the username.");
         return;
     }
